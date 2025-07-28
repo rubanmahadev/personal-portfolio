@@ -48,10 +48,10 @@
         </div>
         <div id="mobile-nav" class="mobile-nav shadow" style="height: calc(100vh - 51px);">
           <ul class="mob-menu flex flex-col gap-5 p-2 text-center mt-4">
-            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#home">Home</a></li>
-            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#about">About</a></li>
-            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#work">Work</a></li>
-            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#contact">Contact</a></li>
+            <a href="#home"><li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')">Home</li></a>
+            <a href="#about"><li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')">About</li></a>
+            <a href="#work"><li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')">Work</li></a>
+            <a href="#contact"><li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')">Contact</li></a>
           </ul>
         </div>
       </div>
@@ -89,7 +89,7 @@
   </section>
   <!-- Work -->
   <section id="work"
-    class="banner container  mx-auto flex flex-col items-center justify-center lg:justify-center px-10 lg:px-20 mb-10">
+    class="banner container  mx-auto flex flex-col items-center justify-center lg:justify-center px-10 lg:px-20 mb-10 pt-12 sm:pt-0">
     <h1 class="text-4xl xl:text-6xl mb-3 xl:mb-10">What I Do</h1>
     <p class="sub-text text-sm sm:text-md lg:text-xl leading-7 sm:leading-10  mb-7 xl:mb-17">I help businesses and
       individuals build clean, fast, and responsive websites with a focus on
