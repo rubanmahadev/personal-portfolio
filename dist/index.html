@@ -33,6 +33,7 @@
           <h2 class="text-2xl">
             RM
           </h2>
+          <!--  -->
           <button class="mob-menu-icon"
             onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
             aria-label="Main Menu">
@@ -46,11 +47,11 @@
           </button>
         </div>
         <div id="mobile-nav" class="mobile-nav shadow" style="height: calc(100vh - 51px);">
-          <ul class="mob-menu flex flex-col gap-10 p-2 text-center mt-4">
-            <li class="cursor-pointer  "><a href="#home">Home</a></li>
-            <li class="cursor-pointer  "><a href="#about">About</a></li>
-            <li class="cursor-pointer  "><a href="#work">Work</a></li>
-            <li class="cursor-pointer  "><a href="#contact">Contact</a></li>
+          <ul class="mob-menu flex flex-col gap-5 p-2 text-center mt-4">
+            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#home">Home</a></li>
+            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#about">About</a></li>
+            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#work">Work</a></li>
+            <li class="cursor-pointer py-1 rounded" onclick="toggleSideBar();document.querySelector('.mob-menu-icon').classList.remove('opened')"><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
