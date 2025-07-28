@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/b24d450467.js" crossorigin="anonymous"></script>
+  <title>Ruban Mahadev</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="sticky bg-white z-10 top-0">
+    <nav>
+      <!-- Desktop Nav -->
+       
+      <div class="hidden sm:block flex items-center">
+        <ul class="menu flex gap-10 lg:gap-20 justify-end items-center p-4 pr-12">
+          <li class="mr-auto text-2xl cursor-pointer">RM</li>
+          <li class="nav-link cursor-pointer  ">Home</li>
+          <li class="nav-link cursor-pointer  ">About</li>
+          <li class="nav-link cursor-pointer  ">Work</li>
+          <li class="nav-link cursor-pointer  ">Contact</li>
+        </ul>
+      </div>
+      <!-- Mobile Nav -->
+      <div class="block sm:hidden  ">
+        <!-- Animated Button -->
+        <div class="flex justify-between items-center p-2">
+          <h2 class="text-2xl">
+            RM
+          </h2>
+          <button class="mob-menu-icon"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
+            <svg width="35" height="35" viewBox="0 0 100 100" onclick="toggleSideBar()">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-nav" class="mobile-nav shadow" style="height: calc(100vh - 51px);">
+          <ul class="mob-menu flex flex-col gap-10 p-2 text-center mt-4">
+            <li class="cursor-pointer  ">Home</li>
+            <li class="cursor-pointer  ">About</li>
+            <li class="cursor-pointer  ">Work</li>
+            <li class="cursor-pointer  ">Contact</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Banner Section -->
+  <section class="banner container mx-auto flex flex-row items-center justify-center md:justify-start px-10 lg:px-20 ">
+    <div>
+      <h1 class="text-6xl md:text-6xl  mb-4 leading-17">Ruban Mahadev</h1>
+      <p class="sub-text text-sm md:text-lg  md:text-end">A Front-End Developer, Chennai | Bangalore</p>
+    </div>
+  </section>
+  <!-- About -->
+  <section class="banner container mx-auto flex flex-col items-center justify-center px-10 lg:px-20 mb-10">
+    <h1 class="text-4xl xl:text-6xl mb-[2%]">About Me</h1>
+    <p class="sub-text text-sm xl:text-xl leading-7 mb-[5%] sm:leading-10 text-justify">
+      I’m a dedicated Front-End Web Developer with 1+ year of self-driven, hands-on experience in building responsive
+      and user-centric web applications. Proficient in HTML, CSS, JavaScript, and modern frameworks like Angular and
+      React, I’ve developed real-time projects focusing on clean design, performance, and scalable architecture. Skilled
+      in integrating RESTful APIs, managing state, ensuring cross-browser compatibility, and creating reusable
+      components. Experienced with Git-based version control, adhering to best practices in code management and
+      collaboration.
+    </p>
+    <div class="flex max-w-[95%] overflow-x-auto sm:grid sm:grid-cols-4 tech-icon-grid gap-10 lg:gap-x-40 lg:gap-y-15 ">
+      <img src="assets/tech-stack-icons/html.png" alt="">
+      <img src="assets/tech-stack-icons/css.png" alt="">
+      <img src="assets/tech-stack-icons/js.png" alt="">
+      <img src="assets/tech-stack-icons/ts.png" alt="">
+      <img src="assets/tech-stack-icons/tailwindcss-mark.d52e9897.svg" alt="">
+      <img src="assets/tech-stack-icons/bootstrap.png" alt="">
+      <img src="assets/tech-stack-icons/angular.png" alt="">
+      <img src="assets/tech-stack-icons/react.png" alt="">
+    </div>
+  </section>
+  <!-- Work -->
+  <section
+    class="banner container  mx-auto flex flex-col items-center justify-center lg:justify-center px-10 lg:px-20 mb-10">
+    <h1 class="text-4xl xl:text-6xl mb-3 xl:mb-10">What I Do</h1>
+    <p class="sub-text text-sm sm:text-md lg:text-xl leading-7 sm:leading-10  mb-7 xl:mb-17">I help businesses and
+      individuals build clean, fast, and responsive websites with a focus on
+      modern design and
+      best practices. Here are the areas I specialize in:</p>
+    <div class="work-card grid grid-cols-1 md:grid-cols-3 max-w-[95%] gap-10  lg:gap-10 xl:gap-20">
+      <div
+        class="bg-gray-50 flex flex-col  items-center gap-5 xl:gap-10 p-5 lg:p-10 rounded-2xl shadow-lg sm:shadow-none hover:scale-110 transition-all duration-400 cursor-pointer">
+        <img src="assets/tech-stack-icons/web.png" alt="">
+        <p class="text-sm md:text-xs lg:text-sm hyphens-auto leading-7 font-normal text-left">
+          I create static websites that are clean, mobile-first, and fully responsive using HTML, CSS, and Tailwind.
+          Ideal for portfolios, landing pages, and business sites.
+        </p>
+      </div>
+      <div
+        class="bg-gray-50 flex flex-col  items-center gap-5 xl:gap-10 p-5 lg:p-10 rounded-2xl shadow-lg sm:shadow-none hover:scale-110 transition-all duration-400 cursor-pointer">
+        <img src="assets/tech-stack-icons/Front-End-Dev-Logo.png" alt="">
+        <p class="text-sm md:text-xs lg:text-sm hyphens-auto leading-7 font-normal text-left">
+          I build dynamic, scalable single-page applications (SPAs) using modern frameworks like Angular and React,
+          focused on performance and user experience.
+        </p>
+      </div>
+      <div
+        class="bg-gray-50 flex flex-col  items-center gap-5 xl:gap-10 p-5 lg:p-10 rounded-2xl shadow-lg sm:shadow-none hover:scale-110 transition-all duration-400 cursor-pointer">
+        <img src="assets/tech-stack-icons/figma-code-1.png" alt="">
+        <p class="text-sm md:text-xs lg:text-sm hyphens-auto leading-7 font-normal text-left">
+          I convert Figma or design mockups into pixel-perfect front-end code, ensuring consistent design across devices
+          using Tailwind, SCSS, or CSS.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+   <footer>
+     <section class="container banner mx-auto px-10 lg:px-20 flex flex-col justify-center mb-10">
+       <h2 class="text-4xl xl:text-6xl mb-10 lg:mb-30 text-center">Contact Me</h2>
+       <div class=" lg:grid lg:grid-cols-[1.5fr_2fr] gap-5">
+         <div class="flex flex-col item gap-7 mb-10 px-5 lg:px-0">
+           <p class="lg:text-lg "><i class="fa-regular fa-paper-plane"></i>&nbsp;&nbsp;rubanmahadev5@outlook.com</p>
+           <p class="lg:text-lg "><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;9176754516</p>
+           <div class="sm-icons flex gap-3 ">
+             <a href=""><i class="fab fa-linkedin"></i></a>
+             <a href=""><i class="fab fa-facebook"></i></a>
+             <a href=""><i class="fab fa-instagram"></i></a>
+             <a href=""><i class="fab fa-whatsapp"></i></a>
+           </div>
+           <button
+             class="px-4 py-2 bg-[#28282B] text-white border border-[#28282B] hover:bg-white hover:text-[#28282B] rounded-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer  lg:w-[40%] mx-auto lg:mx-0">
+             Download CV
+           </button>
+         </div>
+         <div class="form">
+           <form class="flex flex-col gap-5">
+             <input class="border border-gray-200 py-3 p-2 rounded-lg text-sm" type="text" placeholder="Name">
+             <input class="border border-gray-200 py-3 p-2 rounded-lg text-sm" type="text" placeholder="Email">
+             <textarea class="border border-gray-200 p-2 rounded-lg text-sm" rows="7" name="" id=""
+               placeholder="Message"></textarea>
+               <button
+             class="px-5 py-2 bg-[#28282B] text-white border border-[#28282B] hover:bg-white hover:text-[#28282B] rounded-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer lg:w-[40%] mx-auto lg:mx-0">
+             Submit
+           </button>
+           </form>
+         </div>
+       </div>
+     </section>
+   </footer>
+
+  <script src="./script.js"></script>
+  <script>
+    const sections = document.querySelectorAll('section');
+    let currentSection = 0;
+    let isScrolling = false;
+    const navHeight = 56; // Adjust this value to your nav height
+    window.addEventListener('wheel', (e) => {
+      if (isScrolling) return;
+
+      if (e.deltaY > 0 && currentSection < sections.length - 1) {
+        // Scroll down
+        currentSection++;
+      } else if (e.deltaY < 0 && currentSection > 0) {
+        // Scroll up
+        currentSection--;
+      } else {
+        return;
+      }
+
+      isScrolling = true;
+
+      // sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+
+      const sectionTop = sections[currentSection].offsetTop;
+      const offsetTop = sectionTop - navHeight;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+
+      // Prevent rapid scroll by locking temporarily
+      setTimeout(() => {
+        isScrolling = false;
+      }, 100); // Adjust based on scroll duration
+    });
+  </script>
+</body>
+
+</html>
