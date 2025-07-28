@@ -7,7 +7,7 @@
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/b24d450467.js" crossorigin="anonymous"></script>
-  <title>Ruban Mahadev</title>
+  <title>Ruban Mahadev V1</title>
 </head>
 
 <body>
@@ -155,7 +155,7 @@
    </footer>
 
   <script src="./script.js"></script>
-  <script>
+  <!-- <script>
     const sections = document.querySelectorAll('section');
     let currentSection = 0;
     let isScrolling = false;
@@ -190,7 +190,58 @@
         isScrolling = false;
       }, 100); // Adjust based on scroll duration
     });
-  </script>
+  </script> -->
+  <script>
+  const sections = document.querySelectorAll('section');
+  let currentSection = 0;
+  let isScrolling = false;
+  const navHeight = 56;
+
+  // Desktop scroll
+  window.addEventListener('wheel', (e) => {
+    handleScroll(e.deltaY);
+  });
+
+  // Mobile touch
+  let touchStartY = 0;
+  let touchEndY = 0;
+
+  window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  });
+
+  window.addEventListener('touchend', (e) => {
+    touchEndY = e.changedTouches[0].clientY;
+    const deltaY = touchStartY - touchEndY;
+    handleScroll(deltaY);
+  });
+
+  function handleScroll(deltaY) {
+    if (isScrolling) return;
+
+    if (deltaY > 30 && currentSection < sections.length - 1) {
+      currentSection++;
+    } else if (deltaY < -30 && currentSection > 0) {
+      currentSection--;
+    } else {
+      return;
+    }
+
+    isScrolling = true;
+
+    const sectionTop = sections[currentSection].offsetTop;
+    const offsetTop = sectionTop - navHeight;
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      isScrolling = false;
+    }, 800); // Adjust if needed
+  }
+</script>
 </body>
 
 </html>
